@@ -390,11 +390,59 @@ module.exports = {
 }
 ```
 
+插件形式：
 ```js
 module.exports = class LogWebpackPlugin {
     apply(compiler) {
         
     }
+}
+```
+
+### rollup plugin
+
+[rollup plugin-development](https://www.rollupjs.com/guide/plugin-development)
+[@rollup/plugin-babel](https://www.npmjs.com/package/@rollup/plugin-babel)
+
+rollup 同样可以使用 babel 来处理js
+
+rollup.config.js
+```js
+import { getBabelOutputPlugin } from '@rollup/plugin-babel'
+
+export default {
+  input: 'src/rollup-code.js',
+  output: {
+    file: 'dist-rollup/bundle.js',
+    exports: 'auto'
+    // format: 'cjs'
+  },
+  plugins: [
+    json(),
+    getBabelOutputPlugin({
+      presets: ['@babel/preset-env']
+    })
+  ]
+}
+```
+插件形式
+```js
+export default function rollupPluginTest () {
+  return {
+    name: 'pluginName',
+    buildStart() {
+        
+    },
+    load() {
+          
+    },
+    tranform() {
+          
+    },
+    buildEnd() {
+        
+    }
+  }
 }
 ```
 
