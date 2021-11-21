@@ -15,8 +15,8 @@ Babel 是一个通用的多功能的 JavaScript 编译器。此外它还拥有�
 使用 generator-babel-plugin 来生成插件
 ```shell
 npm i -g yo
-npm i -g generator-babel-plugin
-yo babel-plugin
+npm i -g generator-plugin-babel
+yo plugin-babel
 ```
 
 ## Babel 的基本内容

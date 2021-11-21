@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "babel:build": "babel src -d lib",
-    "genarte:babel-plugin": "yo babel-plugin"
+    "babel:build": "babel src -d dist-babel",
+    "webpack:build": "webpack --entry ./src/code.js -o dist-webpack --mode development"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +17,10 @@
     "@babel/preset-flow": "^7.16.0",
     "@babel/preset-react": "^7.16.0",
     "@babel/preset-typescript": "^7.16.0",
+    "babel-loader": "^8.2.3",
     "generator-babel-plugin": "^2.0.1",
+    "webpack": "^5.64.2",
+    "webpack-cli": "^4.9.1",
     "yo": "^4.3.0"
   },
   "dependencies": {

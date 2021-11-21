@@ -11,6 +11,8 @@ package-lock.json
 .idea/**/dictionaries
 .idea/**/shelf
 
+dist-*
+
 # Generated files
 .idea/**/contentModel.xml
 

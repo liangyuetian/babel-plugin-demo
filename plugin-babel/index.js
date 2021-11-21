@@ -1,7 +1,7 @@
 module.exports = function(babel, options, rootSrc) {
     return {
         pre(state) {
-            console.log('start', state)
+            console.log('babel-plugin start')
             this.cache = new Map();
         },
         visitor: {
@@ -15,8 +15,7 @@ module.exports = function(babel, options, rootSrc) {
             },
         },
         post(state) {
-            console.log('end', state)
-
+            console.log('babel-plugin end')
         }
     };
 }

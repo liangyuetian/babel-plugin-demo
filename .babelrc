@@ -16,9 +16,10 @@
     "@babel/preset-typescript"
   ],
   "plugins": [
-    ["./babel-plugin", {
+    ["./plugin-babel", {
       "option1": true,
       "option2": false
-    }, "dasdas"]
+    }
+    ]
   ]
 }
