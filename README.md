@@ -8,17 +8,6 @@ Babel 是一个通用的多功能的 JavaScript 编译器。此外它还拥有�
 
 你可以使用 Babel 创建多种类型的工具来帮助你更有效率并且写出更好的程序。
 
-
-
-[babel cli](https://www.babeljs.cn/docs/babel-cli)
-
-使用 generator-babel-plugin 来生成插件
-```shell
-npm i -g yo
-npm i -g generator-plugin-babel
-yo plugin-babel
-```
-
 ## Babel 的基本内容
 
 [babel-handbook](https://github.com/jamiebuilds/babel-handbook)
