@@ -10,8 +10,6 @@ Babel 是一个通用的多功能的 JavaScript 编译器。此外它还拥有�
 
 ## Babel 的基本内容
 
-[babel-handbook](https://github.com/jamiebuilds/babel-handbook)
-
 Babel 的三个主要处理步骤分别是： 解析（parse），转换（transform），生成（generate）。
 
 ### 解析
