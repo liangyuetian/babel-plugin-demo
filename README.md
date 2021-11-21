@@ -356,6 +356,47 @@ function scopeOne() {
 
 ### babel plugin
 
+```js
+module.exports = function (babel) {
+  return {
+    pre() {},
+    visitor: {
+          
+    },
+    post(state) {}
+  }
+}
+```
+### webpack plugin
+
+[自定义插件](https://webpack.docschina.org/contribute/writing-a-plugin/)
+[一个用来展示webpack内置插件调用关系（钩子）的小工具](https://github.com/alienzhou/webpack-internal-plugin-relation)
+
+webpack 可以使用 babel-loader 来处理js，这样我们写的 babel plugin 也能排上用场
+
+```js
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /(node_modules)/,//排除掉node_module目录
+        use: {
+          loader: 'babel-loader'
+        }
+      }
+    ]
+  }
+}
+```
+
+```js
+module.exports = class LogWebpackPlugin {
+    apply(compiler) {
+        
+    }
+}
+```
 
 ## Babel 实用工具
 
