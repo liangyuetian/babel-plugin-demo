@@ -437,7 +437,10 @@ export default function rollupPluginTest () {
           
     },
     tranform() {
-          
+          return {
+              code: '',
+              map: null // 如果可行将提供 source map
+          }
     },
     buildEnd() {
         
@@ -445,6 +448,16 @@ export default function rollupPluginTest () {
   }
 }
 ```
+
+### vite？
+
+vite 是构建在 rollup 之上，所以 rollup 插件也能在 vite 中使用
+(官方的原话是：为了提供更流畅的体验，Vite 选择了与单个打包器（Rollup）进行更深入的集成)
+
+[https://www.vitejs.net/guide/api-plugin.html](https://www.vitejs.net/guide/api-plugin.html)
+
+如果插件不使用 Vite 特有的钩子，可以实现为 兼容的 Rollup 插件，推荐使用 Rollup 插件名称约定。
+
 
 ## Babel 实用工具
 
